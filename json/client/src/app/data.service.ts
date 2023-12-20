@@ -4,12 +4,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class OService {
+export class DataService {
   s_Madrid:Calcio[]
   s_Barca:Calcio[]
-
-  
-   constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
     ngOnInit(): void {
     // Make the HTTP request:
     this.http.get('/api').subscribe(data => {
